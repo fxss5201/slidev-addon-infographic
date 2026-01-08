@@ -1,0 +1,39 @@
+name: Publish to NPM
+
+# 触发条件：推送以v开头的Tag（如v1.0.0、v2.1.3-beta）
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    # 运行环境：最新版Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出仓库代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 设置Node.js环境（指定你需要的版本，比如18/20）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # 配置npm仓库源（默认是官方源，国内可换淘宝源：registry-url: https://registry.npmmirror.com）
+          registry-url: https://registry.npmjs.org/
+
+      # 3. 安装依赖（如果有构建步骤，比如ts编译，可在此添加npm run build）
+      # - name: Install dependencies
+      #   run: npm ci
+
+      # 4. （可选）构建代码（比如TypeScript项目需要编译）
+      # - name: Build project
+      #   run: npm run build
+
+      # 5. 发布到npm
+      - name: Publish to NPM
+        run: npm publish
+        # 传递npm Token到环境变量，让npm publish自动使用
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

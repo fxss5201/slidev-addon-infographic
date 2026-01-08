@@ -1,0 +1,34 @@
+{
+  "name": "slidev-addon-infographic",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "fxss5201",
+  "description": "@antv/infographic component for slidev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fxss5201/slidev-addon-infographic.git"
+  },
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@antv/infographic": "^0.2.7"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.11.2",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "vue": "^3.5.26"
+  },
+  "keywords": [
+    "slidev",
+    "slidev-addon",
+    "@antv/infographic"
+  ],
+  "files": [
+    "components/Infographic.vue"
+  ]
+}
