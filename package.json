@@ -1,6 +1,6 @@
 {
   "name": "slidev-addon-infographic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "author": "fxss5201",
   "description": "@antv/infographic component for slidev",
