@@ -29,6 +29,7 @@
     "@antv/infographic"
   ],
   "files": [
-    "components/Infographic.vue"
+    "components",
+    "vite.config.ts"
   ]
 }
