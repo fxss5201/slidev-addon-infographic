@@ -40,12 +40,13 @@ duration: 35min
 ---
 title: 图表型 - chart-bar-plain-text
 transition: fade-out
+clicks: 3
 ---
 
 <RenderWhen
   :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
   style="height: 100%;">
-  <Infographic :data="`infographic chart-bar-plain-text
+  <Infographic click :data="`infographic chart-bar-plain-text
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -78,12 +79,13 @@ theme light
 ---
 title: 图表型 - chart-column-simple
 transition: fade-out
+clicks: 3
 ---
 
 <RenderWhen
   :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
   style="width: 68%;height: 100%;margin: 0 auto;">
-  <Infographic :data="`infographic chart-column-simple
+  <Infographic click :data="`infographic chart-column-simple
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -116,12 +118,13 @@ theme light
 ---
 title: 图表型 - chart-line-plain-text
 transition: fade-out
+clicks: 3
 ---
 
 <RenderWhen
   :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
   style="height: 80%;margin: 50px auto;">
-  <Infographic :data="`infographic chart-line-plain-text
+  <Infographic click :data="`infographic chart-line-plain-text
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
