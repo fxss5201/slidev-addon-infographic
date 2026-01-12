@@ -40,13 +40,12 @@ duration: 35min
 ---
 title: 图表型 - chart-bar-plain-text
 transition: fade-out
-clicks: 3
 ---
 
 <RenderWhen
   :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
   style="height: 100%;">
-  <Infographic click :data="`infographic chart-bar-plain-text
+  <Infographic :data="`infographic chart-bar-plain-text
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）

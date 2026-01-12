@@ -2,6 +2,11 @@
 
 [@antv/infographic](https://infographic.antv.vision/) component for slidev
 
+![theme-light](./assets/theme-light.png)
+![theme-dark](./assets/theme-dark.png)
+![slide-overview](./assets/slide-overview.png)
+![slides-overview](./assets/slides-overview.png)
+
 ## Usage Process
 
 ``` sh
@@ -60,6 +65,7 @@ addons:
 | click | Whether to respond to [Slidev click animation](https://sli.dev/guide/animations#click-animation), If set to `true`, you need to add a [`clicks`](https://sli.dev/guide/animations#total) field in the `frontmatter` with the value being the number of clicks. | boolean | false | 1.0.4 |
 
 - **Note: `click` is primarily used for demonstrating effects, and it is recommended to turn it off when exporting.**
+- **Note: When `click` is `true`, it needs to occupy a separate page.**
 - **Note: After setting `click` to `true` and adding the `clicks` count, you need to click yourself to confirm the effect.**
 
 | 参数 | 描述 | 类型 | 默认值 | 版本 |
@@ -68,7 +74,8 @@ addons:
 | click | 是否响应[Slidev点击动画](https://cn.sli.dev/guide/animations#click-animation)，如果设置为 `true`，需要在 `frontmatter` 中添加 [`clicks`](https://cn.sli.dev/guide/animations#total) 字段，值为点击次数。 | boolean | false | 1.0.4 |
 
 1. **注意：`click` 主要用于演示效果，导出时建议关闭。**
-2. **注意：设置 `click` 为 `true` 后，并添加 `clicks` 点击次数之后的效果需要自行点击确认。**
+2. **注意：`click` 为 `true` 时，需要单独占一页。**
+3. **注意：设置 `click` 为 `true` 后，并添加 `clicks` 点击次数之后的效果需要自行点击确认。**
 
 ## Example
 

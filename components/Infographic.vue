@@ -66,8 +66,16 @@ watch(() => props.click, (val) => {
   initInfographic()
 })
 
-watch(() => nav.currentRoute.value.query.clicks, () => {
-  initInfographic()
+watch(() => nav.currentRoute.value.query.clicks, (val) => {
+  if (props.click) {
+    const clickNum = val || 0
+    infographic.value.render(`${parseStringRef.value.strNoData}
+${parseStringRef.value.strDataNoItems}
+  items
+    ${parseStringRef.value.itemsArray.slice(0, Math.min(clickNum * 1 + 1, parseStringRef.value.itemsArray.length)).join('\n')}`)
+  } else {
+    infographic.value.render(props.data)
+  }
 })
 
 watch(() => isDark.value, (newDark) => {
