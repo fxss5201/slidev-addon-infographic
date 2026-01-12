@@ -70,6 +70,10 @@ addons:
 1. **注意：`click` 主要用于演示效果，导出时建议关闭。**
 2. **注意：设置 `click` 为 `true` 后，并添加 `clicks` 点击次数之后的效果需要自行点击确认。**
 
+## Example
+
+[Example](https://github.com/fxss5201/slidev-addon-infographic/blob/main/slides.md?plain=1)
+
 ## Slidev
 
 Edit the [slides.md](./slides.md) to see the changes.

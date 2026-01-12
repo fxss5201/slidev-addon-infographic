@@ -4,7 +4,7 @@
 
 <script setup>
 import { useDarkMode, useNav } from '@slidev/client'
-import {ref, watch, onMounted, onUnmounted} from 'vue'
+import {ref, shallowRef, watch, onMounted, onUnmounted} from 'vue'
 import {Infographic} from '@antv/infographic'
 
 const props = defineProps({
@@ -19,7 +19,7 @@ const props = defineProps({
 })
 
 const containerRef = ref(null)
-let infographic = ref(null)
+let infographic = shallowRef(null)
 const { isDark } = useDarkMode()
 const nav = useNav()
 const parseStringRef = ref(null)
