@@ -27,6 +27,37 @@ Add the following to your `package.json`:
 
 Add the following to your `slides.md`:
 
+### v1.1.0+
+
+Starting from v1.1.0, the `InfographicBox` component has been added (which internally includes the `RenderWhen` component) for displaying infographics in slides.
+
+从 v1.1.0 开始，新增了 `InfographicBox` 组件（内部包含 `RenderWhen` 组件），用于在幻灯片中显示信息图。
+
+``` md
+---
+addons:
+  - slidev-addon-infographic
+---
+
+<InfographicBox
+  :data="`infographic list-row-simple-horizontal-arrow
+data
+  items
+    - label 步骤 1
+      desc 开始
+    - label 步骤 2
+      desc 进行中
+    - label 步骤 3
+      desc 完成
+`"></InfographicBox>
+```
+
+- **To export in PDF format, add the `isExportPdf` property to the `InfographicBox` component. When exporting, `click` will be set to `false` by default.**
+
+1. **如需导出 PDF 格式，请为 `InfographicBox` 组件增加 `isExportPdf` 属性，导出的时候会默认将 `click` 设置为 `false`。**
+
+### v1.0.0+
+
 ``` md
 ---
 addons:
@@ -36,15 +67,16 @@ addons:
 <RenderWhen
   :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
   style="height: 100%;">
-  <Infographic :data="`infographic list-row-simple-horizontal-arrow
-    data
-      items
-        - label 步骤 1
-          desc 开始
-        - label 步骤 2
-          desc 进行中
-        - label 步骤 3
-          desc 完成
+  <Infographic
+    :data="`infographic list-row-simple-horizontal-arrow
+data
+  items
+    - label 步骤 1
+      desc 开始
+    - label 步骤 2
+      desc 进行中
+    - label 步骤 3
+      desc 完成
     `"></Infographic>
 </RenderWhen>
 ```
@@ -63,6 +95,7 @@ addons:
 | --------- | ----------- | ---- | ------- | ------- |
 | data | Infographic data | string | - | 1.0.0 |
 | click | Whether to respond to [Slidev click animation](https://sli.dev/guide/animations#click-animation), If set to `true`, you need to add a [`clicks`](https://sli.dev/guide/animations#total) field in the `frontmatter` with the value being the number of clicks. | boolean | false | 1.0.4 |
+| isExportPdf | Whether to export in PDF format. When exporting, `click` will be set to `false` by default. | boolean | false | 1.1.0 |
 
 - **Note: `click` is primarily used for demonstrating effects, and it is recommended to turn it off when exporting.**
 - **Note: When `click` is `true`, it needs to occupy a separate page.**
@@ -72,6 +105,7 @@ addons:
 | ---- | ---- | ---- | ------ | ---- |
 | data | 信息图数据 | string | - | 1.0.0 |
 | click | 是否响应[Slidev点击动画](https://cn.sli.dev/guide/animations#click-animation)，如果设置为 `true`，需要在 `frontmatter` 中添加 [`clicks`](https://cn.sli.dev/guide/animations#total) 字段，值为点击次数。 | boolean | false | 1.0.4 |
+| isExportPdf | 是否导出 PDF 格式。导出时会默认将 `click` 设置为 `false`。 | boolean | false | 1.1.0 |
 
 1. **注意：`click` 主要用于演示效果，导出时建议关闭。**
 2. **注意：`click` 为 `true` 时，需要单独占一页。**
