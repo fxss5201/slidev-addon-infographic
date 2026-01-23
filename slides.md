@@ -42,10 +42,8 @@ title: 图表型 - chart-bar-plain-text
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic chart-bar-plain-text
+<InfographicBox
+  :data="`infographic chart-bar-plain-text
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -68,8 +66,7 @@ data
       icon lucide/trophy
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 图表型 [chart-bar-plain-text](https://infographic.antv.vision/gallery/example?template=chart-bar-plain-text)
@@ -81,10 +78,10 @@ transition: fade-out
 clicks: 3
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="width: 68%;height: 100%;margin: 0 auto;">
-  <Infographic click :data="`infographic chart-column-simple
+<InfographicBox
+  click
+  style="width: 68%;margin: 0 auto;"
+  :data="`infographic chart-column-simple
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -107,8 +104,7 @@ data
       icon lucide/trophy
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 图表型 [chart-column-simple](https://infographic.antv.vision/gallery/example?template=chart-column-simple)
@@ -120,10 +116,10 @@ transition: fade-out
 clicks: 3
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 80%;margin: 50px auto;">
-  <Infographic click :data="`infographic chart-line-plain-text
+<InfographicBox
+  click
+  style="height: 80%;margin: 50px auto;"
+  :data="`infographic chart-line-plain-text
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -146,8 +142,7 @@ data
       icon lucide/trophy
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 图表型 [chart-line-plain-text](https://infographic.antv.vision/gallery/example?template=chart-line-plain-text)
@@ -158,10 +153,8 @@ title: 图表型 - chart-pie-compact-card
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic chart-pie-compact-card
+<InfographicBox
+  :data="`infographic chart-pie-compact-card
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -184,8 +177,7 @@ data
       icon lucide/trophy
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 图表型 [chart-pie-compact-card](https://infographic.antv.vision/gallery/example?template=chart-pie-compact-card)
@@ -196,10 +188,8 @@ title: 图表型 - chart-pie-donut-compact-card
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic chart-pie-donut-compact-card
+<InfographicBox
+  :data="`infographic chart-pie-donut-compact-card
 data
   title 年度营收增长
   desc 展示近三年及本年目标营收对比（单位：亿元）
@@ -222,8 +212,7 @@ data
       icon lucide/trophy
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 图表型 [chart-pie-donut-compact-card](https://infographic.antv.vision/gallery/example?template=chart-pie-donut-compact-card)
@@ -234,10 +223,8 @@ title: 图表型 - chart-wordcloud
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic chart-wordcloud
+<InfographicBox
+  :data="`infographic chart-wordcloud
 data
   items
     - label 数据分析
@@ -422,8 +409,7 @@ data
       value 40
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 图表型 [chart-wordcloud](https://infographic.antv.vision/gallery/example?template=chart-wordcloud)
@@ -434,10 +420,8 @@ title: 对比型 - compare-binary-horizontal-badge-card-arrow
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic compare-binary-horizontal-badge-card-arrow
+<InfographicBox
+  :data="`infographic compare-binary-horizontal-badge-card-arrow
 data
   title 企业优劣势对比
   desc 呈现企业当前在市场中的核心优势与待改善劣势
@@ -460,8 +444,7 @@ data
           desc 人力与物流成本高于行业均值
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 对比型 [compare-binary-horizontal-badge-card-arrow](https://infographic.antv.vision/gallery/example?template=compare-binary-horizontal-badge-card-arrow)
@@ -472,10 +455,8 @@ title: 对比型 - compare-hierarchy-left-right-circle-node-pill-badge
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic compare-hierarchy-left-right-circle-node-pill-badge
+<InfographicBox
+  :data="`infographic compare-hierarchy-left-right-circle-node-pill-badge
 data
   title 竞品分析
   desc 通过对比分析，找出差距，明确改进方向
@@ -498,8 +479,7 @@ data
           desc 品牌营销策略就是以品牌输出为核心的营销策略
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 对比型 [compare-hierarchy-left-right-circle-node-pill-badge](https://infographic.antv.vision/gallery/example?template=compare-hierarchy-left-right-circle-node-pill-badge)
@@ -510,10 +490,8 @@ title: 对比型 - compare-swot
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic compare-swot
+<InfographicBox
+  :data="`infographic compare-swot
 data
   title SWOT分析
   desc 通过全面分析内外部因素，指导企业战略制定与调整
@@ -552,8 +530,7 @@ data
         - label 宏观经济不确定性
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 对比型 [compare-swot](https://infographic.antv.vision/gallery/example?template=compare-swot)
@@ -564,10 +541,8 @@ title: 层级型 - hierarchy-mindmap-branch-gradient-circle-progress
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic hierarchy-mindmap-branch-gradient-circle-progress
+<InfographicBox
+  :data="`infographic hierarchy-mindmap-branch-gradient-circle-progress
 data
   title 用户调研
   desc 通过用户调研，了解用户需求和痛点，指导产品设计和优化
@@ -598,8 +573,7 @@ data
               icon mingcute/danmaku-line
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 层级型 [hierarchy-mindmap-branch-gradient-circle-progress](https://infographic.antv.vision/gallery/example?template=hierarchy-mindmap-branch-gradient-circle-progress)
@@ -610,10 +584,8 @@ title: 层级型 - hierarchy-structure
 transition: fade-out
 ---
 
-<RenderWhen
-  :context="['visible', 'print', 'slide', 'overview', 'presenter', 'previewNext']"
-  style="height: 100%;">
-  <Infographic :data="`infographic hierarchy-structure
+<InfographicBox
+  :data="`infographic hierarchy-structure
 data
   title 系统分层结构
   desc 展示不同层级的模块与功能分组
@@ -673,8 +645,7 @@ data
             - label 功能4
 theme light
   palette antv
-  `"></Infographic>
-</RenderWhen>
+`"></InfographicBox>
 
 <!--
 层级型 [hierarchy-structure](https://infographic.antv.vision/gallery/example?template=hierarchy-structure)
